@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun!</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #14A611 10%, #2D21DB 99%, #14A611 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            overflow-x: hidden;
+        }
+
+        /* Running Text Section Top */
+        .marquee-container {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(5px);
+            padding: 12px 0;
+            overflow: hidden;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .marquee-text {
+            display: flex;
+            white-space: nowrap;
+            animation: marquee 18s linear infinite;
+        }
+
+        .marquee-text span {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #d63384;
+            padding: 0 20px;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+
+        /* Card Container */
+        .card {
+            background: #ffffff;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 450px;
+            width: 90%;
+            margin: 40px 20px;
+            position: relative;
+            animation: popUp 1s ease-out;
+        }
+
+        @keyframes popUp {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        .card h1 {
+            color: #ff4757;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .card .name {
+            color: #2ed573;
+            font-size: 1.8rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #57606f;
+            line-height: 1.6;
+            margin-bottom: 25px;
+            font-size: 1rem;
+        }
+
+        /* Running Text Inside Card */
+        .card-marquee {
+            background: #fff0f3;
+            border-radius: 25px;
+            padding: 8px 0;
+            margin-bottom: 25px;
+            overflow: hidden;
+            border: 1px dashed #ff4757;
+        }
+
+        .card-marquee-text {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marqueeCard 10s linear infinite;
+            color: #ff4757;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        @keyframes marqueeCard {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+
+        /* Interactive Button */
+        .btn {
+            background: linear-gradient(45deg, #ff4757, #ff6b81);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 15px rgba(255, 71, 87, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 71, 87, 0.6);
+        }
+
+        .btn:active {
+            transform: translateY(1px);
+        }
+
+        /* Footer Running Text */
+        .footer-marquee {
+            width: 100%;
+            background: #ff4757;
+            color: white;
+            padding: 8px 0;
+            overflow: hidden;
+        }
+
+        .footer-text {
+            display: inline-block;
+            white-space: nowrap;
+            animation: marqueeFooter 15s linear infinite;
+            font-size: 0.9rem;
+        }
+
+        @keyframes marqueeFooter {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Variasi 1: Running Text Atas (Looping terus-menerus) -->
+    <div class="marquee-container">
+        <div class="marquee-text">
+            <span>🎉 SELAMAT ULANG TAHUN! 🎉</span>
+            <span>🎂 WISH YOU ALL THE BEST! 🎂</span>
+            <span>✨ SEMOGA PANJANG UMUR & SEHAT SELALU! ✨</span>
+            <span>🎈 HAPPY BIRTHDAY! 🎈</span>
+            <!-- Duplikasi pesan agar teks menyambung dengan mulus -->
+            <span>🎉 SELAMAT ULANG TAHUN! 🎉</span>
+            <span>🎂 WISH YOU ALL THE BEST! 🎂</span>
+            <span>✨ SEMOGA PANJANG UMUR & SEHAT SELALU! ✨</span>
+            <span>🎈 HAPPY BIRTHDAY! 🎈</span>
+        </div>
+    </div>
+
+    <!-- Kartu Ucapan Utam -->
+    <div class="card">
+        <h1>Happy Birthday! 🎂</h1>
+        <div class="name">AFIFUDIN SIREGAR</div>
+
+        <!-- Variasi 2: Running Text di Dalam Kartu -->
+        <div class="card-marquee">
+            <div class="card-marquee-text">
+                🎁 Semoga hari ini penuh dengan kebahagiaan, tawa, dan kenangan indah! 🎁
+            </div>
+        </div>
+
+        <p>
+            Semoga di usia yang baru ini kamu selalu diberikan kesehatan, keberkahan, 
+            kebahagiaan yang berlimpah, dan semua cita-cita serta impianmu bisa tercapai. 
+            Teruslah menjadi pribadi yang baik dan menginspirasi!
+        </p>
+
+        <button class="btn" onclick="tampilkanKejutan()">Buka Kejutan ✌♫♪˙❤‿❤˙♫♪✌</button>
+    </div>
+
+    <!-- Variasi 3: Running Text Bawah (Footer) -->
+    <div class="footer-marquee">
+        <div class="footer-text">
+            🌟 Special Day for a Special Person • Make a Wish & Blow the Candles! 🎂 • Always Be Happy! 💖
+        </div>
+    </div>
+
+    <script>
+        function tampilkanKejutan() {
+            alert("🎉 Selamat Ulang Tahun sekali lagi! Semoga hari-harimu selalu menyenangkan! ✨🎂");
+        }
+    </script>
+
+</body>
+</html>
